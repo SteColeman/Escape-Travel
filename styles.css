@@ -1,7 +1,8 @@
 /* Global styles */
 body {
     font-family: 'Barlow', sans-serif;
-    margin: 0;
+    /* margin: 0; */
+
 }
 
 ul {
@@ -34,7 +35,6 @@ h3 {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    max-width: 1440px;
     height: 30rem;
     padding: 5%;
 }
@@ -88,3 +88,68 @@ header {
 #destinationChecker label {
     font-size: 1rem;
 }
+
+/* Feature section */
+
+/* Package section */
+
+#packagePanels {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 20px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#packageText {
+    text-align: center;
+    width: 35%;
+    margin: auto;
+}
+
+.panel {
+    background-color: #f7f9fc;
+    border-radius: 8px;
+    padding: 2rem;
+}
+
+.packagePrice {
+    color: #04afa8;
+    font-size: 28px;
+    font-family: 'Barlow';
+    font-weight: bold;
+}
+
+.packagePriceSpan {
+    font-size: 16px;
+}
+
+.packageDescription {
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    color: #222b45;
+    opacity: 0.5;
+}
+
+.panel:nth-child(2) {
+    box-shadow: 0px 14px 28px #00000026;;
+}
+
+.panel button {
+    width: 80%;
+    border: none;
+    border-radius: 25px;
+    height: 2rem;
+    margin-left: auto;
+    background-color: #222b45;
+    color: white;
+}
+
+.panel:nth-child(2) button {
+    background-color: #ff710f;
+}
+
+/* Testimonial section */
+
+/* Footer section */
