@@ -1,7 +1,7 @@
 /* Global styles */
 body {
     font-family: 'Barlow', sans-serif;
-    /* margin: 0; */
+    margin: 0;
 
 }
 
@@ -11,6 +11,7 @@ ul {
 
 a {
     text-decoration: none;
+    color: black;
 }
 
 h1 {
@@ -18,19 +19,12 @@ h1 {
     font-weight: bold;
 }
 
-/* h2 {
-    font-size: 40px;
-}
-
-h3 {
-    font-size: 28px;
-} */
 
 /* Header section */
 
 #headerSection {
     background-image:
-    linear-gradient(270deg, #00000000 0%, #000000A5 100%),
+    linear-gradient(270deg, #00000000,  #000000A5),
     url("/images/Hero-Background.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -46,30 +40,43 @@ h3 {
 }
 
 nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: 5rem;
     width: 80%;
-    margin: auto;
     background-color: #ffffff;
     border-radius: 7px;
+    padding: 0 2rem;
 }
 
 nav ul {
-    display: flex;
+    height: 100%;
+    vertical-align: center;
+    /* margin: 0; */
+    /* margin-top: auto;
+    margin-bottom: auto; */
 }
+
+/* nav ul:first-child {
+    justify-content: space-between;
+
+} */
 
 nav ul li {
-    display: flex;
+    display: inline-block;
     width: 5rem;
-    margin-right: 0;
-}
-
-nav ul li a {
-    color: #04afa8;
-
 }
 
 nav img {
-    width: 100%;
+    width: 3rem;
+    height: 3rem;
+}
+
+.navActive {
+    border-top: 2px solid #04afa8;
+    color: #04afa8;
+    /* font-weight: 400; */
 }
 
 header {
@@ -89,9 +96,30 @@ header {
     font-size: 1rem;
 }
 
+#destinationChecker button {
+    width: 8rem;
+    height: 2rem;
+    border-radius: 15px;
+    background-color:#ff710f;
+    border: none;
+    
+}
+
 /* Feature section */
 
 /* Package section */
+
+#packageHeader {
+    text-align: center;
+    width: 55%;
+    margin: auto;
+}
+
+#packagesHeaderText {
+    font-size: 14px;
+    opacity: 0.75;
+    color: #222b45;
+}
 
 #packagePanels {
     display: grid;
@@ -102,16 +130,16 @@ header {
     margin-right: auto;
 }
 
-#packageText {
-    text-align: center;
-    width: 35%;
-    margin: auto;
-}
-
 .panel {
     background-color: #f7f9fc;
     border-radius: 8px;
     padding: 2rem;
+    min-width: 250px;
+
+}
+
+.panel:nth-child(2) {
+    box-shadow: 0px 14px 28px #00000026;;
 }
 
 .packagePrice {
@@ -123,17 +151,26 @@ header {
 
 .packagePriceSpan {
     font-size: 16px;
+    vertical-align: middle;
+    font-weight: lighter;
 }
 
 .packageDescription {
     font-family: 'Nunito', sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     color: #222b45;
     opacity: 0.5;
+    margin-bottom: 1.5rem;
 }
 
-.panel:nth-child(2) {
-    box-shadow: 0px 14px 28px #00000026;;
+.panel li {
+    list-style-image: url(images/check-box.svg);
+    margin-bottom: 1.5rem;
+    font-size: 14px;
+}
+
+.panel li span {
+    margin-left: 1rem;
 }
 
 .panel button {
@@ -144,6 +181,7 @@ header {
     margin-left: auto;
     background-color: #222b45;
     color: white;
+    margin-top: 2.5rem;
 }
 
 .panel:nth-child(2) button {
@@ -153,3 +191,36 @@ header {
 /* Testimonial section */
 
 /* Footer section */
+
+footer {
+    background-image: linear-gradient(296deg, #04afa8, #008DCD);
+    background-repeat: no-repeat;
+    padding: 6rem;
+    color: #ffffff;
+    display: flex;
+    /* row-gap: 2rem; */
+}
+
+
+#contactUsForm  {
+    height: 100%;
+    width: 80%;
+    background-color: #ffffff;
+    margin-left: auto;
+    max-width: 485px;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+#contactUsForm input {
+    border: none;
+    border-bottom: solid 1px #979797;
+    height:4rem;
+    margin-bottom: 1rem;
+    width: 80%;
+}
+
+#contactUsForm button {
+    width: 80%;
+    margin: 2rem 0;
+}

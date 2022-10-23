@@ -7,16 +7,20 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Nunito&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Nunito&display=swap" rel="stylesheet">
+    <script
+			  src="https://code.jquery.com/jquery-3.6.1.min.js"
+			  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+			  crossorigin="anonymous"></script>
     <title>Escape Travel</title>
 </head>
 <body>
     <section id="headerSection">
         <nav>
-            <ul>
-                <li><img src="images/Escape-Logo.png" alt="Escape company logo"></li>
+            <img src="images/Escape-Logo.png" alt="Escape company logo">
 
-                <li><a href="#">Home</a></li>
+            <ul>
+                <li id="navHome"><a href="index.html">Home</a></li>
                 <li><a href="#">Packages</a></li>
                 <li><a href="#">Testimonial</a></li>
                 <li><a href="#">Contact Us</a></li>
@@ -80,14 +84,17 @@
         <img src="images/Star-Rating.svg" alt="4 out of 5 star rating">
 
         <p>£1,240</p>
-        <button>Book Now</button>
+        <button id="'bookNowBtn">Book Now</button>
+        
+        <img src="/images/Scandinavian-House.jpg" alt="white house in snowy forest, scandanavia">
+
     </section>
 
     <section id="packageSection">
 
-        <div id="packageText">
+        <div id="packageHeader">
             <h2>Packages</h2>
-            <p>Every corner of the globe has something totally unique and wonderful to offer. We hope you'll do every package, but which one are you starting with?</p>
+            <p id="packagesHeaderText">Every corner of the globe has something totally unique and wonderful to offer. We hope you'll do every package, but which one are you starting with?</p>
     
         </div>
 
@@ -96,9 +103,11 @@
                 <h3>Asian Trip</h3>
                 <p class="packagePrice">£1,000<span class="packagePriceSpan">/person</span></p>
                 <p class="packageDescription">Namaskar, welcome to Incredible India, where culture echoes, tradition speaks, beauty enthralls and diversity delights.</p>
-                <p>1 Plane Ticket</p>
-                <p>1 Hotel Room</p>
-                <p>Lunch & Dinner</p>
+                <ul>
+                    <li><span>1 Plane Ticket</span></li>
+                    <li><span>1 Hotel Room</span></li>
+                    <li><span>Lunch & Dinner</span></li>
+                </ul>
                 <button>Book Now</button>
             </div>
 
@@ -106,9 +115,11 @@
                 <h3>Europe Trip</h3>
                 <p class="packagePrice">£1,240<span class="packagePriceSpan">/person</span></p>
                 <p class="packageDescription">Pizza in Naples, bier tents in Munich, beaches in Barcelona, and hit the slopes in the Alps. This trip really has it all.</p>
-                <p>5 Plane Tickets</p>
-                <p>5 Hotel Rooms</p>
-                <p>Lunch & Dinner</p>
+                <ul>
+                    <li><span>5 Plane Ticket</span></li>
+                    <li><span>5 Hotel Room</span></li>
+                    <li><span>Lunch & Dinner</span></li>
+                </ul>
                 <button>Book Now</button>
             </div>
 
@@ -116,9 +127,11 @@
                 <h3>Asian Trip</h3>
                 <p class="packagePrice">£1,300<span class="packagePriceSpan">/person</span></p>
                 <p class="packageDescription">Picture this.You're sat watching the sun set over the Savannah after an action packed day of sub-saharan adventures. Hakuna matata.</p>
-                <p>10 Plane Tickets</p>
-                <p>10 Hotel Rooms</p>
-                <p>Lunch & Dinner</p>
+                <ul>
+                    <li><span>10 Plane Ticket</span></li>
+                    <li><span>10 Hotel Room</span></li>
+                    <li><span>Lunch & Dinner</span></li>
+                </ul>
                 <button>Book Now</button>
             </div>
        </div>
@@ -127,12 +140,9 @@
 
     </section id="testimonialSection">
 
-        
-
-    <section>
-
-    <section>
-
+    <footer>
+    
+    <div id="contactUsHeader">
         <h4>NEED MORE HELP?</h4>
 
         <h2>Contact Us</h2>
@@ -145,18 +155,21 @@
             Chester, <br>
             United Kingdon
         </p>
+    </div>
 
-        <div id="contactUsForm">
-            <form action="">
-                Send us a message
-                <input type="text" placeholder="Full Name">
-                <input type="email" placeholder="Email" name="" id="">
-                <input type="text" placeholder="Message">
-                <button>Submit</button>
-            </form>
-        </div>
+    <div id="contactUsForm">
+        <form action="">
+            Send us a message
+            <input type="text" placeholder="Full Name">
+            <input type="email" placeholder="Email" name="" id="">
+            <input type="text" placeholder="Message">
+            <button>Submit</button>
+        </form>
+    </div>
+    </footer>
+    <script src="index.js"></script>
 
-    </section>
+
 
     
 </body>
