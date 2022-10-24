@@ -1,6 +1,8 @@
-/* Global styles */
+/* 
+Global styles 
+*/
 body {
-    font-family: 'Barlow', sans-serif;
+    font-family: 'Nunito', sans-serif;
     margin: 0;
 
 }
@@ -17,10 +19,43 @@ a {
 h1 {
     font-size: 48px;
     font-weight: bold;
+    font-family: 'Barlow', sans-serif;
+}
+h2 {
+    font-family: 'Barlow', sans-serif;
+}
+
+select {
+    font-family: 'Nunito', sans-serif;
 }
 
 
-/* Header section */
+
+/* 
+Font Styles 
+*/
+
+.barlowFont {
+    font-family: 'Barlow', sans-serif;
+}
+
+.halfOpacity {
+    opacity: 0.5;
+}
+
+.lightGrey {
+    color: #222b45;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+
+
+/* 
+Header section 
+*/
 
 #headerSection {
     background-image:
@@ -31,11 +66,23 @@ h1 {
     background-size: cover;
     height: 30rem;
     padding: 5%;
+    position: relative;
 }
 
-#headerSection h3 {
-    font-size: small;
-    font-weight: lighter;
+header {
+    width: 90%;
+    color: white;
+    margin-left: auto
+
+}
+
+header h1 {
+    width: 40%;
+}
+
+header p {
+    font-size: 20px;
+    width: 35%;
     
 }
 
@@ -48,24 +95,29 @@ nav {
     background-color: #ffffff;
     border-radius: 7px;
     padding: 0 2rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 nav ul {
+    display: flex;
     height: 100%;
-    vertical-align: center;
-    /* margin: 0; */
-    /* margin-top: auto;
-    margin-bottom: auto; */
+    align-items: center;
+    justify-content: space-between;
 }
 
-/* nav ul:first-child {
-    justify-content: space-between;
-
-} */
-
 nav ul li {
-    display: inline-block;
-    width: 5rem;
+    display: flex;
+    height: 100%;
+    box-sizing: border-box;
+    margin: auto 0.5rem;
+}
+
+nav ul li a {
+    display: flex;
+    align-items: center;
+
+
 }
 
 nav img {
@@ -74,22 +126,29 @@ nav img {
 }
 
 .navActive {
-    border-top: 2px solid #04afa8;
-    color: #04afa8;
-    /* font-weight: 400; */
+    border-top: 2px solid #04e1d9;
 }
 
-header {
-    width: 50%;
-    color: white
+.active {
+    color: #04afa8;
+    font-weight: 700;
 }
+
+
 
 #destinationChecker {
     background-color: #ffffff;
     width: 60%;
     border-radius: 7px;
-    margin: auto;
     display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 5rem;
+    box-shadow: 0px 0px 20px #0000001A;
+    position: absolute;
+    bottom: -5%;
+    left: 20%;
+    text-align: center;
 }
 
 #destinationChecker label {
@@ -98,16 +157,96 @@ header {
 
 #destinationChecker button {
     width: 8rem;
-    height: 2rem;
-    border-radius: 15px;
+    height: 3rem;
+    border-radius: 24px;
     background-color:#ff710f;
+    color: #ffffff;
     border: none;
-    
 }
 
-/* Feature section */
+.destinationDropdown {
+    border: none;
+    background-color: #ffffff;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid #979797;
+}
 
-/* Package section */
+#checkDate {
+    display: flex;
+    font-size: 12px;
+}
+
+#checkDate p {
+    margin-right: 0.5rem;
+}
+
+
+
+#checkOut {
+    border-left: 1px solid black;
+}
+
+.checkCalender {
+    width: 18px;
+}
+
+
+
+/* 
+Feature section 
+*/
+
+#featuredSection {
+    display: flex;
+    justify-content: space-around;
+    column-gap: 5rem;
+    margin: 8rem auto 10rem;
+    width: 80%;
+}
+
+#featuredDestination {
+    width: 40%;
+
+}
+
+#starRating {
+    display: block;
+}
+
+#featuredImg {
+    width: 540px;
+    height: 494px;
+    border-radius: 15px;
+}
+
+#featuredPrice {
+    font-size: 32px;
+    color: #04afa8;
+    border-left: 2px solid #04e1d9;
+    padding-left: 0.8rem;
+    display: inline-block
+}
+
+#bookNowBtn {
+    width: 11rem;
+    height: 2.5rem;
+    color: #ffffff;
+    background-color: #ff710f;
+    border: none;
+    border-radius: 24px;
+    margin-left: 5rem;;
+}
+
+
+
+/* 
+Package section 
+*/
+
+#packageSection h1{
+    margin-bottom: 0;
+    font-weight: 700;
+}
 
 #packageHeader {
     text-align: center;
@@ -119,6 +258,9 @@ header {
     font-size: 14px;
     opacity: 0.75;
     color: #222b45;
+    width: 55%;
+    margin-left: auto;
+    margin-right: auto
 }
 
 #packagePanels {
@@ -126,8 +268,7 @@ header {
     grid-template-columns: 1fr 1fr 1fr; 
     gap: 20px;
     width: 70%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 5rem auto 10rem;;
 }
 
 .panel {
@@ -156,8 +297,7 @@ header {
 }
 
 .packageDescription {
-    font-family: 'Nunito', sans-serif;
-    font-size: 12px;
+    font-size: 14px;
     color: #222b45;
     opacity: 0.5;
     margin-bottom: 1.5rem;
@@ -174,31 +314,121 @@ header {
 }
 
 .panel button {
-    width: 80%;
+    width: 100%;
     border: none;
     border-radius: 25px;
-    height: 2rem;
+    height: 3rem;
     margin-left: auto;
     background-color: #222b45;
     color: white;
     margin-top: 2.5rem;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
 }
 
 .panel:nth-child(2) button {
     background-color: #ff710f;
 }
 
-/* Testimonial section */
 
-/* Footer section */
 
-footer {
+/* 
+Testimonial section 
+*/
+
+#testimonialSection {
+    background-color: #F7F9FC;
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 5rem 9rem;
+    align-items: center;
+}
+
+#testimonialSection h5 {
+    color: #ff710f;
+    font-weight: lighter;
+    margin-top: 0;
+}
+
+.scrollArrow {
+    width: 60px;
+    color: #04afa8
+}
+
+.customerTestimonial {
+    display: flex;
+    column-gap: 4rem;
+    width: 55%;
+}
+
+.testimonialImage img   {
+    width: 316px;
+    height: 316px;
+    border-radius: 10px;
+    vertical-align: middle;
+}
+
+.testimonialReview {
+    font-size: 40px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: bolder;
+    margin-top: 0;
+}
+
+.testimonialName {
+    font-family: 'Barlow', sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    color: #04afa8;
+    margin: 0;
+}
+
+.testimonialLocation {
+    font-weight: 100;
+    font-size: 16px;
+    color: #04afa8;
+    margin: 0;
+}
+
+
+/* 
+Footer section 
+*/
+
+#footerSection {
     background-image: linear-gradient(296deg, #04afa8, #008DCD);
     background-repeat: no-repeat;
     padding: 6rem;
     color: #ffffff;
+}
+
+footer {
+   width: 85%;
     display: flex;
-    /* row-gap: 2rem; */
+    margin: auto;
+}
+
+footer h4 {
+    font-weight: 100;
+}
+
+#customerHelp {
+    width: 60%;
+    font-weight: 100;
+    margin-bottom: 5rem;
+}
+
+#companyAddress {
+    display: inline-block;
+    margin-top: 0;
+}
+
+#navArrow {
+    width: 20px;
+    float: left;
+    margin: 0.3rem 1rem
 }
 
 
@@ -210,6 +440,16 @@ footer {
     max-width: 485px;
     border-radius: 8px;
     box-sizing: border-box;
+    color: black;
+}
+
+#contactUsForm form {
+    text-align: center;
+}
+
+#contactUsForm h2 {
+    text-align: left;
+    margin-left:3rem;
 }
 
 #contactUsForm input {
@@ -221,6 +461,11 @@ footer {
 }
 
 #contactUsForm button {
-    width: 80%;
+    width: 90%;
     margin: 2rem 0;
+    height: 3rem;
+    border: none;
+    color: #ffffff;
+    background-color: #ff710f;
+    border-radius:24px;
 }

@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;400;700&family=Nunito:wght@200;400;700&display=swap" rel="stylesheet">
     <script
-			  src="https://code.jquery.com/jquery-3.6.1.min.js"
-			  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
-			  crossorigin="anonymous"></script>
+            src="https://code.jquery.com/jquery-3.6.1.min.js"
+            integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+            crossorigin="anonymous"></script>
     <title>Escape Travel</title>
 </head>
 <body>
@@ -20,7 +20,7 @@
             <img src="images/Escape-Logo.png" alt="Escape company logo">
 
             <ul>
-                <li id="navHome"><a href="index.html">Home</a></li>
+                <li id="navHome"><a id="navHomeA" href="index.html">Home</a></li>
                 <li><a href="#">Packages</a></li>
                 <li><a href="#">Testimonial</a></li>
                 <li><a href="#">Contact Us</a></li>
@@ -30,13 +30,13 @@
         <header>
             <h1>Choose The Perfect Destination</h1>
 
-            <h3>Lockdown has lifted and its time to fly. Spread your wings and discover what the world has to offer without putting a crater in your wallet.</h3>
+            <p>Lockdown has lifted and its time to fly. Spread your wings and discover what the world has to offer without putting a crater in your wallet.</p>
         </header>
 
-        <div id="destinationChecker">
+        <div id="destinationChecker" class="nunitoFont">
             <div>
-                <label for="">DESTINATION</label>
-                <select name="destination">
+                <label class="halfOpacity lightGrey">DESTINATION</label> <br>
+                <select class="destinationDropdown" name="destination">
                     <option value="">All Destination</option>
                     <option value="">Spain</option>
                     <option value="">France</option>
@@ -47,8 +47,9 @@
             </div>
 
             <div>
-                <label for="">TRAVELLERS</label>
-                <select name="travellers">
+                <label class="halfOpacity lightGrey">TRAVELLERS</label> <br>
+                <select class="destinationDropdown" name="travellers">
+                    <option value="">Number of Travellers</option>
                     <option value="">1</option>
                     <option value="">2</option>
                     <option value="">3</option>
@@ -59,9 +60,14 @@
             </div>
 
             <div>
-                <label for="">DATE</label> <br>
-                <input class='inputDate' type="date" value="Check in">
-                <input class='inputDate' type="date">
+                <label class="halfOpacity lightGrey">DATE</label> <br>
+                <div id="checkDate">
+                    <p>Check in</p>
+                    <img class="checkCalender" src="/images/calender.svg" alt="">
+
+                    <p id="checkOut">Check out</p>
+                    <img class="checkCalender" src="/images/calender.svg" alt="">
+                </div>
             </div>
 
             <div>
@@ -74,26 +80,30 @@
 
     <section id="featuredSection">
 
-        <h4>FEATURED DESTINATION</h4>
+        <div id="featuredDestination">
+            <h4>FEATURED DESTINATION</h4>
 
-        <h2>Lifes for living! Why not try something different?</h2>
-
-        <p>Admit it. Before you started looking at holidays you never thought you'd consider a beautiful Scandinavian house in a winter wonderland. Let us change your mind.</p>
-
-        <h2>Nusa Penida Tour</h2>
-        <img src="images/Star-Rating.svg" alt="4 out of 5 star rating">
-
-        <p>£1,240</p>
-        <button id="'bookNowBtn">Book Now</button>
+            <h1>Lifes for living! Why not try something different?</h1>
+    
+            <p>Admit it. Before you started looking at holidays you never thought you'd consider a beautiful Scandinavian house in a winter wonderland. Let us change your mind.</p>
+    
+            <h2>Nusa Penida Tour</h2>
+            <img id="starRating" src="images/Star-Rating.svg" alt="4 out of 5 star rating">
+    
+            <p id="featuredPrice" class="barlowFont bold">£1,240</p>
+            <button id="bookNowBtn">Book Now</button>
+        </div>
         
-        <img src="/images/Scandinavian-House.jpg" alt="white house in snowy forest, scandanavia">
+        <div>
+            <img id="featuredImg" src="/images/Scandinavian-House.jpg" alt="white house in snowy forest, scandanavia">
 
+        </div>
     </section>
 
     <section id="packageSection">
 
         <div id="packageHeader">
-            <h2>Packages</h2>
+            <h1>Packages</h1>
             <p id="packagesHeaderText">Every corner of the globe has something totally unique and wonderful to offer. We hope you'll do every package, but which one are you starting with?</p>
     
         </div>
@@ -138,39 +148,56 @@
 
     </section>
 
-    </section id="testimonialSection">
+    <section id="testimonialSection">
+        <div>
+            <img class="scrollArrow" src="/images/arrowLeft.svg" alt="left facing arrow">
+        </div>
 
-    <footer>
+        <div class="customerTestimonial">
+
+        </div>
+
+        <div>
+            <img class="scrollArrow" src="/images/arrowRight.svg" alt="right facing arrow">
+        </div>
+
+    </section>
+
+    <section id="footerSection">
+        <footer>
     
-    <div id="contactUsHeader">
-        <h4>NEED MORE HELP?</h4>
+            <div id="contactUsHeader">
+                <h4>NEED MORE HELP?</h4>
+    
+                <h1>Contact Us</h1>
+    
+                <p id="customerHelp">We are always making sure that our customer support is as speedy as possible. Get in touch and we will do everything we can assist you.</p>
+    
+                <div>
+                    <img id="navArrow" src="/images/navArrow.svg" alt="navigation style arrow">
+    
+                <p id="companyAddress">
+                    Escape Travel, <br>
+                    Station Road, <br>
+                    Chester, <br>
+                    United Kingdon
+                </p>
+                </div>
+            </div>
+    
+            <div id="contactUsForm">
+                <form action="">
+                    <h2 class="bold">Send us a message</h2>
+                    <input type="text" placeholder="Full Name">
+                    <input type="email" placeholder="Email" name="" id="">
+                    <input type="text" placeholder="Message">
+                    <button>SUBMIT</button>
+                </form>
+            </div>
+        </footer>
+    </section>
 
-        <h2>Contact Us</h2>
-
-        <p>We are always making sure that our customer support is as speedy as possible. Get in touch and we will do everything we can assist you.</p>
-
-        <p>
-            Escape Travel, <br>
-            Station Road, <br>
-            Chester, <br>
-            United Kingdon
-        </p>
-    </div>
-
-    <div id="contactUsForm">
-        <form action="">
-            Send us a message
-            <input type="text" placeholder="Full Name">
-            <input type="email" placeholder="Email" name="" id="">
-            <input type="text" placeholder="Message">
-            <button>Submit</button>
-        </form>
-    </div>
-    </footer>
     <script src="index.js"></script>
-
-
-
     
 </body>
 </html>
